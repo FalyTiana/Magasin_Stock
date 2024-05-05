@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { BsShop } from "react-icons/bs";
+import { HiOutlineMail } from "react-icons/hi";
+import { CiLock } from "react-icons/ci";
 import bgHome from "../assets/images/empty-store-front-vector.jpg";
 import styles from "./home.module.css";
 import Link from "next/link";
@@ -10,35 +12,42 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.formContainer}>
           <p className={styles.title}>
-            Magasin <BsShop /> stockage
+            Magasin <BsShop /> Stockage
           </p>
           <p className={styles.welcome}>Bienvenu chez Nous</p>
           <hr />
           <p className={styles.message}>Connectez vous</p>
           <form className={styles.form}>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Veuillez entrer votre email"
-              className={styles.input}
-            />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Veuillez entrer votre mot de passe"
-              className={styles.input}
-            />
-            <button className={styles.button} type='button'>
-                Accéder à votre magasin
+            <div className={styles.inputContainer}>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Veuillez entrer votre email"
+                className={styles.input}
+              />
+              <HiOutlineMail className={styles.inputIcon} />
+            </div>
+            <div className={styles.inputContainer}>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Veuillez entrer votre mot de passe"
+                className={styles.input}
+              />
+              <CiLock className={styles.inputIcon}/>
+            </div>
+
+            <button className={styles.button} type="button">
+              Accéder à votre magasin
             </button>
           </form>
           <p className={styles.text}>
             Vous avez un compte?
-              <Link href="#" className={styles.link}>
-                  S’inscrire
-              </Link>
+            <Link href="#" className={styles.link}>
+              S’inscrire
+            </Link>
           </p>
         </div>
       </div>

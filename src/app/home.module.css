@@ -48,19 +48,35 @@
     color: var(--dark-gray);
     text-align: center;
 }
+.inputContainer,
 .button,
 .input,
 .form{
     width: 100%;
 }
+.inputContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .input{
     padding: 15px 10px;
+    padding-left: 40px;
     border-radius: 10px;
     border: none;
     font-family: var(--myFontsPrimary);
     margin-bottom: 7px;
     font-size: large;
     background-color: #fff;
+}
+.inputIcon{
+    position: absolute;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    color: var(--dark-gray);
 }
 .input:focus{
     outline: none;
