@@ -1,7 +1,13 @@
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
+import PropTypes from "prop-types";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const myFontsPrimary = localFont({
+  src: "../assets/fonts/dreaming-outloud-script-regular-pro.otf", // Chemin vers votre fichier de police
+  variable: "--myFontsPrimary"
+});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +16,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <body className={myFontsPrimary.className}>{children}</body>
     </html>
   );
 }
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
