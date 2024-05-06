@@ -103,3 +103,7 @@
 .link:active{
     opacity: 0.5;
 }
+.error{
+    color: var(--dark-red);
+    text-align: center;
+}
