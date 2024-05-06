@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 const myFontsPrimary = localFont({
-  src: "../assets/fonts/dreaming-outloud-script-regular-pro.otf", // Chemin vers votre fichier de police
+  src: "../../public/assets/fonts/dreaming-outloud-script-regular-pro.otf", // Chemin vers votre fichier de police
   variable: "--myFontsPrimary"
 });
 
